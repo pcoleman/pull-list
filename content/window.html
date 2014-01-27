@@ -1,8 +1,22 @@
-<!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <div>Hello, world!</div>
-  </body>
+<head></head>
+<body>
+<script>
+chrome.runtime.getBackgroundPage(function(window backgroundPage) {
+      console.log( "complete" );
+    });
+
+
+var ComicSearch = document.getElementById('comic_search');
+ComicSearch.addEventListener("submit",processComicSearch);
+
+</script>
+
+<form id="comic_search">
+<input id="comic_query" type="text" name="Search Query">
+<button type="submit">Click me</button>
+</form>
+
+
+</body>
 </html>
